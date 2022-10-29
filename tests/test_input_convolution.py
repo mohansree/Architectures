@@ -22,5 +22,5 @@ def test_input_convolution_exist() -> None:
 
     """
     assert hasattr(
-        architectures.densenet_121.input_convolution_layer, "InputConvolutionLayer"
+        architectures.densenet_121_input_convolution_layer, "InputConvolutionLayer"
     )
