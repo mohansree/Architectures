@@ -6,7 +6,7 @@ Usage:
     python -m pytest Architectures/test_input_convolution
 """
 
-import architectures
+from architectures import densenet_121_input_convolution_layer
 
 
 def test_input_convolution_exist() -> None:
@@ -21,6 +21,4 @@ def test_input_convolution_exist() -> None:
         None
 
     """
-    assert hasattr(
-        architectures.densenet_121_input_convolution_layer, "InputConvolutionLayer"
-    )
+    assert hasattr(densenet_121_input_convolution_layer, "InputConvolutionLayer")
