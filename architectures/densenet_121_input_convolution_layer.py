@@ -40,7 +40,7 @@ class InputConvolutionLayer(torch.nn.Module):
         self.stride = stride
         self.layer = torch.nn.Conv2d(
             in_channels,
-            1,
+            out_channels,
             1,
         )
 
