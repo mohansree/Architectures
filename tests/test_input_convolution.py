@@ -55,4 +55,6 @@ def test_input_convolution_layer_has_attribute_layer() -> None:
         None
 
     """
-    assert hasattr(densenet_121_input_convolution_layer.InputConvolutionLayer, "layer")
+    assert hasattr(
+        densenet_121_input_convolution_layer.InputConvolutionLayer(), "layer"
+    )
