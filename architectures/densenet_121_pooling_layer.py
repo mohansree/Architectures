@@ -23,6 +23,7 @@ class PoolingLayer(torch.nn.Module):  # dead: disable
         self,
         kernel_size=None,
         stride=None,
+        padding=None,
     ) -> None:
         """Construct PoolingLayer.
 
@@ -39,6 +40,7 @@ class PoolingLayer(torch.nn.Module):  # dead: disable
         self.layer = torch.nn.MaxPool2d(
             kernel_size=kernel_size,
             stride=stride,
+            padding=padding,
         )
 
     def forward(  # dead: disable

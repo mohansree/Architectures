@@ -95,6 +95,7 @@ def test_output_shape_is_correct() -> None:
     layer: torch.nn.Module = densenet_121_pooling_layer.PoolingLayer(
         kernel_size=3,
         stride=2,
+        padding=1,
     )
     assert layer(input_tensor).shape == (
         3,
