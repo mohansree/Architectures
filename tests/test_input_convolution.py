@@ -103,3 +103,25 @@ def test_InputConvolutionLayer_accept_arguments() -> None:
         2,
         2,
     )
+
+
+def test_output_size() -> None:
+    """Assert InputConvolutionLayer output size.
+
+    Assert InputConvolutionLayer returns correct shape.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    conv = densenet_121_input_convolution_layer.InputConvolutionLayer(
+        in_channels=3,
+        out_channels=3,
+        kernel_size=7,
+        stride=2,
+    )
+    input_tensor: torch.Tensor = torch.zeros((3, 255, 255))
+    assert conv(input_tensor).shape == (112, 112, 3)
