@@ -76,3 +76,27 @@ def test_layer_is_convolution() -> None:
         densenet_121_input_convolution_layer.InputConvolutionLayer().layer,
         torch.nn.Conv2d,
     )
+
+
+def test_InputConvolutionLayer_accept_arguments() -> None:
+    """Assert the module accept arguments.
+
+    Assert the module accept arguments.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    conv = densenet_121_input_convolution_layer.InputConvolutionLayer(
+        in_channels=3,
+        out_channels=3,
+        kernel_size=7,
+        stride=2,
+    )
+    assert conv.layer.in_channels == 3
+    assert conv.layer.out_channels == 3
+    assert conv.layer.kernel_size == 7
+    assert conv.layer.stride == 2
