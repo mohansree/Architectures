@@ -18,3 +18,19 @@ class PoolingLayer(torch.nn.Module):  # dead: disable
         None
 
     """
+
+    def __init__(
+        self,
+    ) -> None:
+        """Construct PoolingLayer.
+
+        Constructs PoolingLayer.
+
+        Args:
+            None
+
+        Returns:
+            None
+
+        """
+        self.layer = None
