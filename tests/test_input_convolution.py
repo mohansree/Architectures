@@ -58,3 +58,21 @@ def test_input_convolution_layer_has_attribute_layer() -> None:
     assert hasattr(
         densenet_121_input_convolution_layer.InputConvolutionLayer(), "layer"
     )
+
+
+def test_layer_is_convolution() -> None:
+    """Assert layer is convolution.
+
+    Assert the layer is a convolution layer.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert isinstance(
+        densenet_121_input_convolution_layer.InputConvolutionLayer().layer,
+        torch.nn.Conv2d,
+    )
