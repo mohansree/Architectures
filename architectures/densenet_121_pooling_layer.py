@@ -40,3 +40,20 @@ class PoolingLayer(torch.nn.Module):  # dead: disable
             kernel_size=kernel_size,
             stride=stride,
         )
+
+    def forward(  # dead: disable
+        self,
+        features: torch.Tensor,
+    ) -> torch.Tensor:
+        """Implement forward.
+
+        Pass through pooling layer.
+
+        Args:
+            features: Input tensor.
+
+        Returns:
+            Result from layer.
+
+        """
+        return self.layer(features)
