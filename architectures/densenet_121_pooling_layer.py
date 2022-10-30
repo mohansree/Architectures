@@ -33,6 +33,7 @@ class PoolingLayer(torch.nn.Module):  # dead: disable
             None
 
         """
+        super().__init__()
         self.layer = torch.nn.MaxPool2d(
             kernel_size=1,
         )
