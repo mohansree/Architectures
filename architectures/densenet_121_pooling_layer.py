@@ -6,4 +6,13 @@ Usage:
     from architectures.densenet_121_pooling_layer import PoolingLayer
 """
 
-PoolingLayer: None
+
+class PoolingLayer:  # dead: disable
+    """Pooling layer.
+
+    Implement pooling layer.
+
+    Attributes:
+        None
+
+    """
