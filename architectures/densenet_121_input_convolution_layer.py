@@ -45,6 +45,20 @@ class InputConvolutionLayer(torch.nn.Module):
             stride=stride,
         )
 
+    def forward(self, features: torch.Tensor) -> torch.Tensor:  # dead: disable
+        """Implement forward.
+
+        Implement the forward function.
+
+        Args:
+            features: The input features.
+
+        Returns:
+            The result from layer.
+
+        """
+        return self.layer(features)
+
 
 if __name__ == "__main__":
     InputConvolutionLayer()
