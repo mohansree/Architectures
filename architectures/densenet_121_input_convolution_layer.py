@@ -6,8 +6,10 @@ Usage:
     Implicit usage.
 """
 
+import torch
 
-class InputConvolutionLayer:
+
+class InputConvolutionLayer(torch.nn.Module):
     """Input convolution layer.
 
     The input convolution layer.
