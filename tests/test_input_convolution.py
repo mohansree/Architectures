@@ -122,6 +122,8 @@ def test_output_size() -> None:
         out_channels=3,
         kernel_size=7,
         stride=2,
+        padding=3,
+        bias=False,
     )
     input_tensor: torch.Tensor = torch.zeros((3, 224, 224))
     assert conv(input_tensor).shape == (3, 112, 112)

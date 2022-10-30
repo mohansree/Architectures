@@ -21,6 +21,8 @@ class InputConvolutionLayer(torch.nn.Module):
         out_channels=1,
         kernel_size=1,
         stride=1,
+        padding=1,
+        bias=True,
     ) -> None:
         """Construct InputConvolutionLayer.
 
@@ -43,6 +45,8 @@ class InputConvolutionLayer(torch.nn.Module):
             out_channels,
             kernel_size,
             stride=stride,
+            padding=padding,
+            bias=bias,
         )
 
     def forward(self, features: torch.Tensor) -> torch.Tensor:  # dead: disable
