@@ -39,3 +39,18 @@ def test_pooling_layer_is_nn_module() -> None:
 
     """
     assert issubclass(densenet_121_pooling_layer.PoolingLayer, torch.nn.Module)
+
+
+def test_pooling_layer_has_attribute_layer() -> None:
+    """Assert pooling layer exist.
+
+    Assert pooling layer exist.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert hasattr(densenet_121_pooling_layer.PoolingLayer(), "layer")
