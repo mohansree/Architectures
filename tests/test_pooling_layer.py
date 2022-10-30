@@ -54,3 +54,20 @@ def test_pooling_layer_has_attribute_layer() -> None:
 
     """
     assert hasattr(densenet_121_pooling_layer.PoolingLayer(), "layer")
+
+
+def test_layer_is_pooling_layer() -> None:
+    """Assert layer is a pooling layer.
+
+    Assert layer is a pooling layer.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert isinstance(
+        densenet_121_pooling_layer.PoolingLayer().layer, torch.nn.MaxPool2d
+    )
