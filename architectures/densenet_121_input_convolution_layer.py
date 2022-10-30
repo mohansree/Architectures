@@ -15,6 +15,22 @@ class InputConvolutionLayer(torch.nn.Module):
     The input convolution layer.
     """
 
+    def __init__(
+        self,
+    ) -> None:
+        """Construct InputConvolutionLayer.
+
+        Construct the InputConvolutionLayer.
+
+        Args:
+            None
+
+        Returns:
+            None
+
+        """
+        self.layer = None
+
 
 if __name__ == "__main__":
     InputConvolutionLayer()
