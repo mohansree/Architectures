@@ -17,10 +17,10 @@ class InputConvolutionLayer(torch.nn.Module):
 
     def __init__(
         self,
-        in_channels=None,
-        out_channels=None,
-        kernel_size=None,
-        stride=None,
+        in_channels=1,
+        out_channels=1,
+        kernel_size=1,
+        stride=1,
     ) -> None:
         """Construct InputConvolutionLayer.
 
