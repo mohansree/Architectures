@@ -42,6 +42,7 @@ class InputConvolutionLayer(torch.nn.Module):
             in_channels,
             out_channels,
             kernel_size=kernel_size,
+            stride=stride,
         )
 
 

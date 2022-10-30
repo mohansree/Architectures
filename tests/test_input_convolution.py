@@ -99,4 +99,7 @@ def test_InputConvolutionLayer_accept_arguments() -> None:
     assert conv.layer.in_channels == 3
     assert conv.layer.out_channels == 3
     assert conv.layer.kernel_size == (7, 7)
-    assert conv.layer.stride == 2
+    assert conv.layer.stride == (
+        2,
+        2,
+    )
