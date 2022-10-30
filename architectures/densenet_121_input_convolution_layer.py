@@ -29,7 +29,11 @@ class InputConvolutionLayer(torch.nn.Module):
             None
 
         """
-        self.layer = None
+        self.layer = torch.nn.Conv2d(
+            1,
+            1,
+            1,
+        )
 
 
 if __name__ == "__main__":
