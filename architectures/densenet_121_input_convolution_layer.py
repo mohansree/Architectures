@@ -29,6 +29,7 @@ class InputConvolutionLayer(torch.nn.Module):
             None
 
         """
+        super().__init__()
         self.layer = torch.nn.Conv2d(
             1,
             1,
