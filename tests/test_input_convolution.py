@@ -41,3 +41,18 @@ def test_input_convolution_subclass_nn_module() -> None:
     assert issubclass(
         densenet_121_input_convolution_layer.InputConvolutionLayer, torch.nn.Module
     )
+
+
+def test_input_convolution_layer_has_attribute_layer() -> None:
+    """Assert convolution layer exist.
+
+    Assert convolution layer exist.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert hasattr(densenet_121_input_convolution_layer.InputConvolutionLayer, "layer")
