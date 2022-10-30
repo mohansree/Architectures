@@ -71,3 +71,33 @@ def test_layer_is_pooling_layer() -> None:
     assert isinstance(
         densenet_121_pooling_layer.PoolingLayer().layer, torch.nn.MaxPool2d
     )
+
+
+def test_output_shape_is_correct() -> None:
+    """Assert output shape is correct.
+
+    Assert output shape is correct.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    input_tensor: torch.Tensor = torch.zeros(
+        (
+            3,
+            112,
+            112,
+        )
+    )
+    layer: torch.nn.Module = densenet_121_pooling_layer.PoolingLayer(
+        kernel_size=3,
+        stride=2,
+    )
+    assert layer(input_tensor).shape == (
+        3,
+        56,
+        56,
+    )
