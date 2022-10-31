@@ -7,4 +7,13 @@ Usage:
     from architectures.dense_121_dense_block import DenseBlock
 """
 
-DenseBlock: None = None
+
+class DenseBlock:  # dead: disable
+    """DenseBlock.
+
+    The dense block.
+
+    Attributes:
+        None
+
+    """
