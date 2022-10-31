@@ -7,8 +7,10 @@ Usage:
     from architectures.dense_121_dense_block import DenseBlock
 """
 
+import torch
 
-class DenseBlock:  # dead: disable
+
+class DenseBlock(torch.nn.Module):  # dead: disable
     """DenseBlock.
 
     The dense block.
