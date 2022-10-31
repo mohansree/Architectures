@@ -6,6 +6,9 @@ Usage:
     pytest tests/test_dence_block.py
 
 """
+
+import inspect
+
 from architectures import dense_121_dense_block
 
 
@@ -22,3 +25,18 @@ def test_dense_block_exist():
 
     """
     assert hasattr(dense_121_dense_block, "DenseBlock")
+
+
+def test_dense_block_is_a_class():
+    """Assert dense block is a class.
+
+    Assert dense block is a class.
+
+    Args:
+        None.
+
+    Returns:
+        None
+
+    """
+    assert inspect.isclass(dense_121_dense_block.DenseBlock)
