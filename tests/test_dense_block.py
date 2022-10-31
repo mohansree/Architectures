@@ -9,6 +9,8 @@ Usage:
 
 import inspect
 
+import torch
+
 from architectures import dense_121_dense_block
 
 
@@ -40,3 +42,18 @@ def test_dense_block_is_a_class():
 
     """
     assert inspect.isclass(dense_121_dense_block.DenseBlock)
+
+
+def test_dense_block_is_a_nn_module() -> None:
+    """Assert dense block is a module.
+
+    Assert dense block is a module.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert issubclass(dense_121_dense_block.DenseBlock, torch.nn.Module)
