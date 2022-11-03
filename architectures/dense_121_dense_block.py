@@ -23,6 +23,7 @@ class DenseLayer(torch.nn.Module):  # dead: disable
     def __init__(
         self,
         in_features: int = 1,
+        inplace: bool = True,
     ) -> None:
         """Construct DenseLayer.
 
@@ -39,3 +40,4 @@ class DenseLayer(torch.nn.Module):  # dead: disable
         self.batch_norm: torch.nn.BatchNorm2d = torch.nn.BatchNorm2d(
             in_features,
         )
+        self.relu: torch.nn.ReLU = torch.nn.ReLU(inplace=inplace)
