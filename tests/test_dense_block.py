@@ -41,7 +41,7 @@ def test_dense_block_is_a_class():
         None
 
     """
-    assert inspect.isclass(dense_121_dense_block.DenseBlock)
+    assert inspect.isclass(dense_121_dense_block.DenseLayer)
 
 
 def test_dense_block_is_a_nn_module() -> None:
@@ -56,4 +56,4 @@ def test_dense_block_is_a_nn_module() -> None:
         None
 
     """
-    assert issubclass(dense_121_dense_block.DenseBlock, torch.nn.Module)
+    assert issubclass(dense_121_dense_block.DenseLayer, torch.nn.Module)
