@@ -19,3 +19,22 @@ class DenseLayer(torch.nn.Module):  # dead: disable
         None
 
     """
+
+    def __init__(
+        self,
+        in_features: int = 1,
+    ) -> None:
+        """Construct DenseLayer.
+
+        Constructs DenseLayer.
+
+        Args:
+            None
+
+        Returns:
+            None
+
+        """
+        self.batch_norm: torch.nn.BatchNorm2d = torch.nn.BatchNorm2d(
+            in_features,
+        )
