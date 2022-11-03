@@ -57,3 +57,18 @@ def test_dense_block_is_a_nn_module() -> None:
 
     """
     assert issubclass(dense_121_dense_block.DenseLayer, torch.nn.Module)
+
+
+def test_dense_layer_has_batchnorm() -> None:
+    """Assert batchnorm.
+
+    Assert batchnorm layer in DenseLayer.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert hasattr(dense_121_dense_block.DenseLayer(), "batch_norm")
