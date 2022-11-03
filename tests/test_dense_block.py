@@ -9,6 +9,7 @@ Usage:
 
 import inspect
 
+import pytest
 import torch
 
 from architectures import dense_121_dense_block
@@ -59,7 +60,18 @@ def test_dense_block_is_a_nn_module() -> None:
     assert issubclass(dense_121_dense_block.DenseLayer, torch.nn.Module)
 
 
-def test_dense_layer_has_batchnorm() -> None:
+@pytest.mark.parametrize(
+    "attribute",
+    (
+        "batch_norm_1",
+        "relu_1",
+        "conv_1",
+        "batch_norm_2",
+        "relu_2",
+        "conv_2",
+    ),
+)
+def test_dense_layer_has_attribute(attribute: str) -> None:
     """Assert batchnorm.
 
     Assert batchnorm layer in DenseLayer.
@@ -71,19 +83,4 @@ def test_dense_layer_has_batchnorm() -> None:
         None
 
     """
-    assert hasattr(dense_121_dense_block.DenseLayer(), "batch_norm")
-
-
-def test_dense_layer_has_relu() -> None:
-    """Assert relu.
-
-    Assert DenseLayer has ReLU.
-
-    Args:
-        None
-
-    Returns:
-        None
-
-    """
-    assert hasattr(dense_121_dense_block.DenseLayer(), "relu")
+    assert hasattr(dense_121_dense_block.DenseLayer(), attribute)
