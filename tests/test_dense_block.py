@@ -26,7 +26,7 @@ def test_dense_block_exist():
         None.
 
     """
-    assert hasattr(dense_121_dense_block, "DenseBlock")
+    assert hasattr(dense_121_dense_block, "DenseLayer")
 
 
 def test_dense_block_is_a_class():
