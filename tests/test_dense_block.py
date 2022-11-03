@@ -72,3 +72,18 @@ def test_dense_layer_has_batchnorm() -> None:
 
     """
     assert hasattr(dense_121_dense_block.DenseLayer(), "batch_norm")
+
+
+def test_dense_layer_has_relu() -> None:
+    """Assert relu.
+
+    Assert DenseLayer has ReLU.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    """
+    assert hasattr(dense_121_dense_block.DenseLayer(), "relu")
