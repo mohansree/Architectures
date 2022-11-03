@@ -10,7 +10,7 @@ Usage:
 import torch
 
 
-class DenseBlock(torch.nn.Module):  # dead: disable
+class DenseLayer(torch.nn.Module):  # dead: disable
     """DenseBlock.
 
     The dense block.
