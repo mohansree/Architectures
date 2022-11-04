@@ -8,6 +8,7 @@ Usage:
 """
 
 import inspect
+import typing
 
 import pytest
 import torch
@@ -84,3 +85,24 @@ def test_dense_layer_has_attribute(attribute: str) -> None:
 
     """
     assert hasattr(dense_121_dense_block.DenseLayer(), attribute)
+
+
+@pytest.mark.parametrize(
+    "attribute_object_pair",
+    ((dense_121_dense_block.DenseLayer().batch_norm_1, torch.nn.BatchNorm2d),),
+)
+def test_dense_layer_attributes_are_correct_object(
+    attribute_object_pair: typing.Tuple[typing.Any, typing.Any],
+) -> None:
+    """Assert correct object.
+
+    Assert attributes are correct objects.
+
+    Args:
+        attribute_object_pair: A pair of objects.
+
+    Returns:
+        None
+
+    """
+    assert isinstance(attribute_object_pair[0], attribute_object_pair[1])
