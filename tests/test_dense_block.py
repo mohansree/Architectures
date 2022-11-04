@@ -89,7 +89,10 @@ def test_dense_layer_has_attribute(attribute: str) -> None:
 
 @pytest.mark.parametrize(
     "attribute_object_pair",
-    ((dense_121_dense_block.DenseLayer().batch_norm_1, torch.nn.BatchNorm2d),),
+    (
+        (dense_121_dense_block.DenseLayer().batch_norm_1, torch.nn.BatchNorm2d),
+        (dense_121_dense_block.DenseLayer().relu_1, torch.nn.ReLU),
+    ),
 )
 def test_dense_layer_attributes_are_correct_object(
     attribute_object_pair: typing.Tuple[typing.Any, typing.Any],
