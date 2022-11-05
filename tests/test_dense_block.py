@@ -95,6 +95,7 @@ def test_dense_layer_has_attribute(attribute: str) -> None:
         (dense_121_dense_block.DenseLayer().conv_1, torch.nn.Conv2d),
         (dense_121_dense_block.DenseLayer().batch_norm_2, torch.nn.BatchNorm2d),
         (dense_121_dense_block.DenseLayer().relu_2, torch.nn.ReLU),
+        (dense_121_dense_block.DenseLayer().conv_2, torch.nn.Conv2d),
     ),
 )
 def test_dense_layer_attributes_are_correct_object(
