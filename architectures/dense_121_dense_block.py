@@ -39,7 +39,10 @@ class DenseLayer(torch.nn.Module):  # dead: disable
             1,
         )
         self.relu_1: None = torch.nn.ReLU()
-        self.conv_1: None = None
+        self.conv_1: None = torch.nn.Conv2d(
+            1,
+            1,
+        )
         self.batch_norm_2: None = None
         self.relu_2: None = None
         self.conv_2: None = None
